@@ -18,9 +18,9 @@ namespace InventoryItems
             SelectNext();
         }
 
-        public void RemoveItem(Item item)
+        public void RemoveItem()
         {
-            _items.Remove(item);
+            _items.Remove(GetCurrentItem());
             SelectPrev();
         }
         

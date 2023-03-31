@@ -12,11 +12,13 @@ namespace Movement
 
         private IInputHandler _inputHandler;
         private Inventory _inventory;
+        private ItemAttachment _attachment;
 
         private void Start()
         {
             _inputHandler = GetComponent<IInputHandler>();
             _inventory = GetComponent<Inventory>();
+            _attachment = GetComponentInChildren<ItemAttachment>();
         }
 
         private void Update()
@@ -28,9 +30,13 @@ namespace Movement
             
             if (_inputHandler.IsSelectNextInventoryItem) _inventory.SelectNext();
             if (_inputHandler.IsSelectPrevInventoryItem) _inventory.SelectPrev();
-            
-            if (_inputHandler.IsUseInventoryItem) 
-                _inventory.GetCurrentItem()?.Use(GetComponentInChildren<ItemAttachment>());
+            if (_inputHandler.IsUseInventoryItem) _inventory.GetCurrentItem()?.Use(_attachment);
+
+            if (_inputHandler.IsRemoveInventoryItem)
+            {
+                _attachment.GetComponentInChildren<HandItem>()?.ThrowItem();
+                _inventory.RemoveItem();
+            }
         }
 
         private void Move(Vector3 direction)

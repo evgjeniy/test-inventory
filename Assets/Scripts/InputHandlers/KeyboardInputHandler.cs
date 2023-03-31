@@ -7,6 +7,7 @@ namespace InputHandlers
         [SerializeField] private KeyCode selectNextInventoryItem;
         [SerializeField] private KeyCode selectPrevInventoryItem;
         [SerializeField] private KeyCode useInventoryItem;
+        [SerializeField] private KeyCode removeInventoryItem;
 
         private const string HorizontalAxisKey = "Horizontal";
         private const string VerticalAxisKey = "Vertical";
@@ -14,6 +15,7 @@ namespace InputHandlers
         public bool IsSelectNextInventoryItem => Input.GetKeyDown(selectNextInventoryItem);
         public bool IsSelectPrevInventoryItem => Input.GetKeyDown(selectPrevInventoryItem);
         public bool IsUseInventoryItem => Input.GetKeyDown(useInventoryItem);
+        public bool IsRemoveInventoryItem => Input.GetKeyDown(removeInventoryItem);
 
         public Vector3 GetMoveDirection()
         {

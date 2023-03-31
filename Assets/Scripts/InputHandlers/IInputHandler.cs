@@ -7,6 +7,7 @@ namespace InputHandlers
         bool IsSelectNextInventoryItem { get; }
         bool IsSelectPrevInventoryItem { get; }
         bool IsUseInventoryItem { get; }
+        bool IsRemoveInventoryItem { get; }
         Vector3 GetMoveDirection();
     }
 }
