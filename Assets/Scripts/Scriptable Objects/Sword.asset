@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b6516a7525240a6bdb70926a082d2d7, type: 3}
+  m_Name: Sword
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Sword
+  <UiIcon>k__BackingField: {fileID: 21300000, guid: 9bd249defb66f764f9d67169ab17675a, type: 3}
+  <PickupPrefab>k__BackingField: {fileID: 1720644168488102400, guid: 260415dfc06aa254e834271be08fb85f, type: 3}
+  damage: 5
+  attackMask:
+    serializedVersion: 2
+    m_Bits: 55
